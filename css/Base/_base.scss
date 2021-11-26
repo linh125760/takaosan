@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $color-main;
+  line-height: 1.6;
+}
+.container {
+  margin: 0 auto;
+  width: 1080px;
+  @include respond(PC) {
+    width: 95%;
+  }
+  @include respond(SP) {
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-main;
+}
+
+.sp-on{
+  display: none; 
+  @include respond(SP) {
+    display: block;
+  }
+}

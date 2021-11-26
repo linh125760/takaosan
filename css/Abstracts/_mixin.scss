@@ -1,0 +1,21 @@
+@mixin inset {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == SP {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == PC {
+    @media (max-width: 1080px) {
+      @content;
+    }
+  }
+}

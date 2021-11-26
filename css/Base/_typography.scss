@@ -1,0 +1,38 @@
+.heading {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: translateX(5%);
+    background: linear-gradient(
+      286deg,
+      rgba(34, 193, 195, 1) 0%,
+      rgb(196, 240, 40) 70%
+    );
+    width: 40px;
+    height: 4px;
+  }
+  &-sm {
+    font-size: 24px;
+    margin-top: -5px;
+    margin-bottom: 25px;
+    @include respond(SP) {
+      font-family: $text;
+      font-weight: 400;
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+}

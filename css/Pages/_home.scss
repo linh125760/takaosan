@@ -1,0 +1,281 @@
+.news {
+  background: $bg-news;
+  border: 1px solid $color-gray;
+  padding: 68px 0 75px 0;
+  @include respond(SP) {
+    margin: 55px 12px 0 12px;
+    padding: 55px 16px 30px 16px;
+  }
+  .heading {
+    margin-bottom: 30px;
+    @include respond(SP) {
+      margin-bottom: 30px;
+    }
+  }
+  &--times {
+    width: calc(100% / (6 / 4));
+    display: flex;
+    margin: 0 auto;
+    @include respond(SP) {
+      width: 100%;
+      display: block;
+      padding: 0 0 0 10px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 24px;
+      @include respond(SP) {
+        margin-bottom: 20px;
+      }
+    }
+    &__days {
+      width: 130px;
+      height: 28px;
+      background: $color-black;
+      color: $color-white;
+      text-align: center;
+      line-height: 28px;
+      font-size: 14px;
+      font-weight: 500;
+      @include respond(SP) {
+        width: 113px;
+        height: 26px;
+        margin-bottom: 12px;
+      }
+    }
+    &__text {
+      font-family: $text;
+      width: 76%;
+      margin-left: 40px;
+      position: relative;
+      line-height: 1.8;
+      -webkit-text-underline-position: under;
+      -ms-text-underline-position: below;
+      text-underline-position: under;
+      text-decoration: underline;
+      transition: 0.3s;
+      @include respond(SP) {
+        margin-left: 0;
+      }
+      &:hover {
+        color: $color-green;
+      }
+    }
+  }
+}
+
+.features {
+  padding: 124px 0 0 0;
+  @include respond(SP) {
+    padding: 57px 27.5px 0 27.5px;
+  }
+  .heading {
+    margin-bottom: 63px;
+    @include respond(SP) {
+      margin-bottom: 44px;
+    }
+  }
+  &--box {
+    display: flex;
+    @include respond(PC) {
+      align-items: center;
+    }
+    @include respond(SP) {
+      display: block;
+    }
+    &__image {
+      width: calc(100% / 3);
+      display: flex;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+      @include respond(SP) {
+        width: 100%;
+      }
+    }
+    &__text {
+      width: calc(100% / (6 / 4));
+      padding-left: 56px;
+      line-height: 1.7;
+      font-family: $text;
+      @include respond(PC) {
+        padding-left: 20px;
+      }
+      @include respond(PC) {
+        .sp-none {
+          display: none;
+        }
+      }
+      @include respond(SP) {
+        width: 100%;
+        padding-left: 0;
+      }
+      .text-image {
+        margin-top: 20px;
+        span {
+          display: block;
+          @include respond(SP) {
+            display: inline;
+          }
+        }
+        img {
+          float: right;
+          padding-left: 1.5rem;
+          padding-bottom: 1rem;
+          @include respond(SP) {
+            float: none;
+            padding-left: 0;
+            display: block;
+            padding-bottom: 0;
+            margin: 0 auto;
+          }
+        }
+      }
+      .text-bottom {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.sub {
+  padding: 125px 0 125px 0;
+  @include respond(SP) {
+    padding: 140px 10px 110px 10px;
+  }
+  .heading {
+    margin-bottom: 26px;
+  }
+  &-desc {
+    width: calc(100% / (6 / 4));
+    margin: 0 auto;
+    padding: 0 23px 65px 23px;
+    font-family: $text;
+    @include respond(SP) {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+  &--box {
+    display: flex;
+    justify-content: space-between;
+    @include respond(SP) {
+      display: block;
+      margin: 40px 0 0 0;
+    }
+    &__item {
+      width: 345px;
+      border: 4px solid $color-green;
+      box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.5s;
+      img {
+        width: 100%;
+      }
+      @include respond(PC) {
+        width: calc(100% / 3 - 15px);
+      }
+      @include respond(SP) {
+        width: 100%;
+        &:nth-child(2) {
+          margin: 30px 0;
+        }
+      }
+      &:hover {
+        transform: translateY(-6px);
+      }
+      .detail {
+        &-name {
+          font-size: 22px;
+          margin-top: 10px;
+        }
+        &-price {
+          font-size: 40px;
+          padding-bottom: 17px;
+          font-weight: 500;
+          line-height: 1.4;
+          span {
+            font-size: 32px;
+          }
+          @include respond(PC) {
+            font-size: 32px;
+            padding: 15px 0 22px;
+          }
+          @include respond(SP) {
+            font-size: 40px;
+            font-weight: 600;
+            padding: 0;
+          }
+        }
+        &-desc {
+          font-size: 14px;
+          font-family: $text;
+          margin-bottom: 28px;
+          padding-left: 6px;
+          padding-top: 8px;
+          @include respond(PC) {
+            min-height: 52px;
+          }
+          @include respond(SP) {
+            margin-bottom: 0;
+            min-height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.items {
+  padding-bottom: 120px;
+  @include respond(SP) {
+    padding: 0 12px 50px 12px;
+  }
+  .heading {
+    margin-bottom: 62px;
+    @include respond(SP) {
+      margin-bottom: 32px;
+    }
+  }
+  &--box {
+    display: flex;
+    flex-wrap: wrap;
+    &__image {
+      @include respond(PC) {
+        width: calc(100% / 6);
+      }
+      @include respond(SP) {
+        width: calc(100% / 3);
+      }
+      position: relative;
+      span {
+        @include inset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        font-weight: 500;
+        opacity: 0;
+        z-index: 1;
+        transition: 1s;
+        text-align: center;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      &::after {
+        @include inset;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: 1s;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
